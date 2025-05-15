@@ -1,3 +1,7 @@
+<script>
+  import Card from "$lib/components/Card.svelte";
+</script>
+
 <section class="max-w-3xl mx-auto p-6">
   <h2
     class="text-2xl font-semibold mb-4 text-center transition-transform duration-300 transform hover:scale-105 active:scale-105"
@@ -20,6 +24,20 @@
       continuous learning, I stay updated with the latest industry trends to
       provide modern and effective solutions.
     </p>
-    <p>Jolan</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <Card
+      title="Fitter"
+      description="This project was made for a goan based client which focuses on fitness and health"
+    />
+    <Card
+      title="Pet Vet"
+      description="This a veterinary platform for making appointments and keeping pets medical record"
+    />
+    <Card
+      title="Noter"
+      description="This is a note taking app made for taking notes"
+    />
   </div>
 </section>
