@@ -11,7 +11,7 @@
       <img
         src="/favicon.png"
         alt="Profile Pic"
-        class="w-12 h-10 rounded-full shadow-lg ring-2 ring-gray-300 transition-transform duration-300 hover:scale-105"
+        class="w-12 h-10 rounded-full shadow-lg ring-2 ring-gray-300 transition-transform duration-300 hover:scale-150"
       />
       <span class="text-lg font-semibold text-gray-800">Profile</span>
     </a>
@@ -19,12 +19,12 @@
     <nav class="flex space-x-6">
       <a
         href="/projects"
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+        class="text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md transition-colors duration-200"
         >Projects</a
       >
       <a
         href="/skills"
-        class="text-gray-700 hover:text-gray-900 transition-colors duration-200"
+        class="text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md transition-colors duration-200"
         >Skills</a
       >
     </nav>

@@ -20,5 +20,6 @@
       continuous learning, I stay updated with the latest industry trends to
       provide modern and effective solutions.
     </p>
+    <p>Jolan</p>
   </div>
 </section>
