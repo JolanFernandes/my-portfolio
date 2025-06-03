@@ -1,34 +1,72 @@
 <script>
   import "../app.css";
+  import ThemeToggle from "$lib/components/ThemeToggle.svelte";
+  import LoadingPage from "$lib/components/LoadingPage.svelte";
+  import { onMount } from "svelte";
+  import { fade } from "svelte/transition";
+
+  let isLoading = true;
+
+  onMount(() => {
+    // Simulate loading duration
+    setTimeout(() => {
+      isLoading = false;
+    }, 3000);
+  });
 </script>
 
-<header class="bg-gray-100 shadow-md sticky top-0 z-50">
-  <div
-    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20"
-  >
-    <!-- Profile Image -->
-    <a href="/" class="flex items-center space-x-3">
-      <img
-        src="/favicon.png"
-        alt="Profile Pic"
-        class="w-12 h-10 rounded-full shadow-lg ring-2 ring-gray-300 transition-transform duration-300 hover:scale-150"
-      />
-      <span class="text-lg font-semibold text-gray-800">Profile</span>
-    </a>
-    <!-- Navigation Links -->
-    <nav class="flex space-x-6">
-      <a
-        href="/projects"
-        class="text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md transition-colors duration-200"
-        >Projects</a
-      >
-      <a
-        href="/skills"
-        class="text-gray-700 hover:bg-gray-200 px-3 py-2 rounded-md transition-colors duration-200"
-        >Skills</a
-      >
-    </nav>
+{#if isLoading}
+  <div transition:fade>
+    <LoadingPage />
   </div>
-</header>
+{:else}
+  <div transition:fade>
+    <header
+      class="bg-black border-b border-gray-500 shadow-md sticky top-0 z-50 transition-colors duration-500 pl-4 pr-4
+           dark:bg-white dark:border-gray-400"
+    >
+      <div
+        class="flex items-center justify-between h-20 space-x-4 sm:space-x-6 max-w-7xl mx-auto"
+      >
+        <!-- Profile Image -->
 
-<slot></slot>
+        <!-- Navigation Links -->
+        <nav class="flex items-center space-x-4 sm:space-x-8">
+          <a
+            href="/"
+            class="flex items-center space-x-3 cursor-pointer group transition-transform duration-300 hover:scale-105"
+            aria-label="Home"
+          >
+            <span class="text-lg font-bold text-white dark:text-black">
+              Profile
+            </span>
+          </a>
+          <a
+            href="/projects"
+            class="text-white px-4 py-2 rounded-md
+                 hover:bg-gray-700 hover:text-white transition-colors duration-300
+                 font-semibold tracking-wide dark:text-black dark:hover:bg-gray-300 dark:hover:text-black"
+          >
+            Projects
+          </a>
+          <a
+            href="/skills"
+            class="text-white px-4 py-2 rounded-md
+                 hover:bg-gray-700 hover:text-white transition-colors duration-300
+                 font-semibold tracking-wide dark:text-black dark:hover:bg-gray-300 dark:hover:text-black"
+          >
+            Skills
+          </a>
+          <ThemeToggle />
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="min-h-screen bg-black text-white lg:pt-6
+           dark:bg-white dark:text-black transition-colors duration-500"
+    >
+      <slot />
+    </div>
+  </div>
+{/if}
