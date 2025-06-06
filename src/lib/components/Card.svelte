@@ -1,9 +1,13 @@
 <script>
+  import { Indicator, Popover } from "flowbite-svelte";
+
   let {
     title,
     description = "Default description",
     imgSrc = "/favicon.png",
     imgAlt = "Image",
+    languages = [], // Example array of languages
+    projectLink = "", // Accept a dynamic link
   } = $props();
 </script>
 
@@ -28,6 +32,19 @@
           {title}
         </h3>
       {/if}
+
+      <!-- Indicator for language used -->
+      <div class="flex flex-wrap gap-2 mb-2">
+        {#each languages as lang}
+          <span class="flex items-center">
+            <Indicator size="sm" color="orange" class="me-1.5" />
+            <span class="text-black dark:text-white text-sm font-medium"
+              >{lang}</span
+            >
+          </span>
+        {/each}
+      </div>
+
       {#if description}
         <p
           class="text-black dark:text-white text-base leading-relaxed max-h-0 overflow-hidden
@@ -36,6 +53,23 @@
           {description}
         </p>
       {/if}
+
+      <!-- Project Link -->
+      {#if projectLink}
+        <a
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block mt-3 text-blue-500 hover:underline dark:text-blue-400"
+        >
+          Visit Project →
+        </a>
+      {:else}
+        <p class="mt-3 text-gray-500 dark:text-gray-400">
+          No link available for this project.
+        </p>
+      {/if}
+
       <slot />
     </div>
   </div>

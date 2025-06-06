@@ -9,7 +9,7 @@
   ];
 </script>
 
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-6 max-w-4xl mx-auto mb-10">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 p-6 max-w-4xl mx-auto">
   {#each images as image}
     <div
       class="relative group rounded-lg overflow-hidden shadow-md dark:shadow-white/70"

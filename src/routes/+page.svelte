@@ -71,6 +71,8 @@
       title="Fitnik "
       description="This website is for a Goan-based client focusing on fitness and health."
       imgSrc="/logofitnik.jpg"
+      languages={["Svelte", "Tailwind", "Supabase"]}
+      projectLink="https://www.fitnik.life/"
     />
     <Card
       title="Fitter"
@@ -79,7 +81,7 @@
     />
     <Card
       title="Plantopia"
-      description="A note-taking app designed for efficient note management."
+      description="Prototype Nursery management app made for a local nusery."
       imgSrc="/plantopia_logo.png"
     />
   </div>
