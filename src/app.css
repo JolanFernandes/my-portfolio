@@ -3,3 +3,6 @@
 @import "tailwindcss/utilities";
 @plugin 'flowbite/plugin';
 
+html{
+      scroll-behavior: smooth;
+}

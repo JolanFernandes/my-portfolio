@@ -33,7 +33,7 @@
         <!-- Navigation Links -->
         <nav class="flex items-center space-x-4 sm:space-x-8">
           <a
-            href="/"
+            href="#profile"
             class="flex items-center space-x-3 cursor-pointer group transition-transform duration-300 hover:scale-105"
             aria-label="Home"
           >
@@ -42,7 +42,7 @@
             </span>
           </a>
           <a
-            href="/projects"
+            href="#projects"
             class="text-white px-4 py-2 rounded-md
                  hover:bg-gray-700 hover:text-white transition-colors duration-300
                  font-semibold tracking-wide dark:text-black dark:hover:bg-gray-300 dark:hover:text-black"
@@ -50,7 +50,7 @@
             Projects
           </a>
           <a
-            href="/skills"
+            href="#skills"
             class="text-white px-4 py-2 rounded-md
                  hover:bg-gray-700 hover:text-white transition-colors duration-300
                  font-semibold tracking-wide dark:text-black dark:hover:bg-gray-300 dark:hover:text-black"
