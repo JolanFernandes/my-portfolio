@@ -5,58 +5,65 @@
 
 <section
   id="profile"
-  class="max-w-4xl mx-auto p-12 bg-white dark:bg-black rounded-xl shadow-lg border border-gray-500 dark:border-gray-400"
+  class="max-w-3xl mx-auto px-6 md:px-12 py-10 bg-white dark:bg-black rounded-xl shadow-lg border border-gray-500 dark:border-gray-400"
 >
   <h2
-    class="text-5xl font-extrabold tracking-wide mb-12 text-center text-black dark:text-white"
+    class="text-4xl font-extrabold tracking-wide mb-8 text-center text-black dark:text-white"
   >
     About Me
   </h2>
-  <div class="flex flex-col md:flex-row md:items-center md:space-x-16 mb-16">
+
+  <div class="flex flex-col md:flex-row md:items-center md:space-x-10">
     <img
       src="/robo.png"
       alt="Profile Pic"
-      class="w-48 h-48 rounded-full object-cover shadow-lg border-4 border-gray-500 dark:border-gray-400"
+      class="w-36 h-36 rounded-full object-cover shadow-lg border-4 border-gray-500 dark:border-gray-400 mx-auto md:mx-0"
     />
-    <p
-      class="text-black text-lg leading-loose max-w-xl font-light dark:text-white space-y-6"
-    >
-      <span class="text-3xl font-bold text-black dark:text-white block mb-2"
-        >Hi, I'm Jolan Fernandes!</span
-      >
-      <span class="text-xl font-semibold block"
-        >A Bachelor of Computer Applications (BCA) graduate, passionate about
-        web development and design.</span
-      >
 
-      <span class="block">
-        I specialize in crafting <strong>responsive, modern websites</strong>
-        that are both visually stunning and highly functional. My goal is to help
-        businesses build a
-        <strong>strong online presence</strong> with
-        <em>intuitive and user-friendly digital experiences</em>.
-      </span>
+    <div class="text-center md:text-left mt-6 md:mt-0">
+      <h1 class="text-2xl font-bold text-blue-600 mb-3">
+        Hey, I'm Jolan Fernandes!
+      </h1>
 
-      <span class="block">
-        As a <strong>creative thinker</strong>, I love bringing ideas to life
-        through <em>thoughtful design and smooth interactions</em>. Attention to
-        <strong>detail, aesthetics, and user experience</strong>
-        is at the core of everything I create—ensuring each website not only looks
-        amazing but also delivers a seamless experience.
-      </span>
+      <p class="text-md text-gray-700 dark:text-gray-300 mb-3">
+        I'm a <span class="font-semibold text-blue-600">BCA graduate</span>
+        passionate about web development and design. I create
+        <span class="font-semibold text-blue-600"
+          >modern, responsive websites</span
+        > that are visually stunning, functional, and help businesses grow online.
+      </p>
 
-      <span class="block">
-        I'm constantly <strong>learning and evolving</strong>, staying ahead of
-        the latest <em>industry trends and technologies</em> to provide innovative
-        solutions that stand out.
-      </span>
+      <p class="text-md text-gray-700 dark:text-gray-300 mb-3">
+        With a strong focus on intuitive user experience, I transform ideas into
+        sleek, seamless interfaces that enhance brands.
+      </p>
 
-      <span class="block text-xl font-semibold">
-        If you're looking for a <strong
-          >fresh perspective, great design, and efficient web/app solutions</strong
-        >, let's connect and create something amazing together!
-      </span>
-    </p>
+      <p class="text-md text-gray-700 dark:text-gray-300 mb-5">
+        Constantly learning and evolving, I stay updated with <span
+          class="font-semibold text-blue-600"
+          >industry trends and technologies</span
+        > to deliver high-quality digital solutions.
+      </p>
+
+      <div class="flex justify-center md:justify-start">
+        <a
+          href="https://www.linkedin.com/in/jolan-fernandes-ds2920"
+          target="_blank"
+          class="flex items-center gap-2 bg-blue-600 text-white text-sm font-medium py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+        >
+          <svg
+            class="w-4 h-4 fill-current text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M4.98 3.5C3.31 3.5 2 4.81 2 6.48s1.31 2.98 2.98 2.98c1.67 0 2.98-1.31 2.98-2.98S6.65 3.5 4.98 3.5zM2 9.5h5.96V22H2V9.5zm7.99 0h5.53v1.71h.08c.77-1.46 2.66-3 5.47-3 5.85 0 6.93 3.85 6.93 8.87V22h-5.96v-7.79c0-1.86-.03-4.24-2.58-4.24-2.58 0-2.97 2.02-2.97 4.1V22h-5.96V9.5z"
+            />
+          </svg>
+          <span>Connect on LinkedIn</span>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
