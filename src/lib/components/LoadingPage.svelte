@@ -1,18 +1,21 @@
 <script>
   import { onMount } from "svelte";
   import { gsap } from "gsap";
+  import { browser } from "$app/environment";
 
-  onMount(() => {
-    gsap.fromTo(
-      ".loading-page",
-      { opacity: 1 },
-      {
-        opacity: 0,
-        duration: 1.5,
-        delay: 2.5,
-      }
-    );
-  });
+  if (browser) {
+    onMount(() => {
+      gsap.fromTo(
+        ".loading-page",
+        { opacity: 1 },
+        {
+          opacity: 0,
+          duration: 1.5,
+          delay: 2.5,
+        }
+      );
+    });
+  }
 </script>
 
 <div class="loading-page">

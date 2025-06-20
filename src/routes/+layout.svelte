@@ -3,16 +3,18 @@
   import ThemeToggle from "$lib/components/ThemeToggle.svelte";
   import LoadingPage from "$lib/components/LoadingPage.svelte";
   import { onMount } from "svelte";
+  import { browser } from "$app/environment";
   import { fade } from "svelte/transition";
 
   let isLoading = true;
-
-  onMount(() => {
-    // Simulate loading duration
-    setTimeout(() => {
-      isLoading = false;
-    }, 3000);
-  });
+  if (browser) {
+    onMount(() => {
+      // Simulate loading duration
+      setTimeout(() => {
+        isLoading = false;
+      }, 3000);
+    });
+  }
 </script>
 
 {#if isLoading}
